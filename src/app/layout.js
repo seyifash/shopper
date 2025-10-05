@@ -1,4 +1,5 @@
 
+import ReactQueryProvider from "@/providers/reactQueryprovider";
 import "./globals.css";
 
 
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
       >
-        {children}
+         <ReactQueryProvider >{children}</ReactQueryProvider>
       </body>
     </html>
   );

@@ -105,7 +105,7 @@ export default function NavBar() {
             )}
           </li>
           <li><a href="#"><i className='bx bx-user'></i></a></li>
-          <li lassName="relative">
+          <li className="relative">
             <a href="#">
               <i className='bx bx-shopping-bag'></i>
                {cartCount > 0 && (

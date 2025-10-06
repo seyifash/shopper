@@ -57,7 +57,7 @@ export default function TrendingProducts() {
     <ProductSection
       title="Trending Products"
       subtitle="Summer Collection — New Modern Design"
-      products={fallbackTrending}
+      products={productsToRender}
     />
   )
 }

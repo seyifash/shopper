@@ -1,3 +1,5 @@
+import Deals from "@/component/deals";
+import Footer from "@/component/Footer";
 import HeroStore from "@/component/hero";
 import NavBar from "@/component/navbar";
 import TrendingProducts from "@/component/trendingProduct";
@@ -9,6 +11,8 @@ export default function Home() {
       <NavBar />
       <HeroStore />
       <TrendingProducts />
+      <Deals />
+      <Footer />
     </div>
   );
 }

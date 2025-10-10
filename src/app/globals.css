@@ -73,6 +73,14 @@ p {
 .section-m1 {
     margin: 40px 0;
 }
+
+.pd{
+    padding: 10px 20px;
+}
+
+.useQuesha{
+    font-family: myFont;
+}
 button.normal {
     font-size: 0.9rem;
     font-weight: 600;

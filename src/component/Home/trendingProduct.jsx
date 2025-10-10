@@ -1,17 +1,17 @@
 'use client'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import ProductSection from './ProductSection'
+import ProductSection from '../Products/ProductSection'
 
 // Local fallback data
-import zara1 from '../assets/images/products/zara1.jpg'
-import zara2 from '../assets/images/products/zara2.png'
-import zara3 from '../assets/images/products/zara3.png'
-import zara4 from '../assets/images/products/zara4.png'
-import zara5 from '../assets/images/products/zara5.png'
-import zara6 from '../assets/images/products/zara6.png'
-import zara7 from '../assets/images/products/zara7.png'
-import zara8 from '../assets/images/products/zara8.png'
+import zara1 from '../../assets/images/products/zara1.jpg'
+import zara2 from '../../assets/images/products/zara2.png'
+import zara3 from '../../assets/images/products/zara3.png'
+import zara4 from '../../assets/images/products/zara4.png'
+import zara5 from '../../assets/images/products/zara5.png'
+import zara6 from '../../assets/images/products/zara6.png'
+import zara7 from '../../assets/images/products/zara7.png'
+import zara8 from '../../assets/images/products/zara8.png'
 
 const fallbackTrending = [
   { name: 'Boucle Textured Jacket', brand: 'Zara', price: 129, image: zara2 },

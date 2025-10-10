@@ -74,11 +74,9 @@ p {
     margin: 40px 0;
 }
 button.normal {
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 600;
-    padding: 15px 30px;
-    color: #000;
-    background-color: #fff;
+    padding: 14px 30px;
     border-radius: 4px;
     cursor: pointer;
     border: none;
@@ -475,10 +473,10 @@ input{
     background-color: #fff;
 }
 
-#newsletter button {
-    background-color: yellow;
+#newsletter .button {
+    /*background-color: yellow;
     color: #fff;
-    white-space: nowrap;
+    white-space: nowrap;*/
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }

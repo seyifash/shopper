@@ -6,9 +6,10 @@ import Image from "next/image"
 import { products } from "@/app/product"
 
 // Import different background images
-import summerSale from "../assets/images/summer.jpg"
-import freeGift from "../assets/images/free.jpg"
-import newArrival from "../assets/images/store.jpg"
+import summerSale from "../../assets/images/summer.jpg"
+import freeGift from "../../assets/images/free.jpg"
+import newArrival from "../../assets/images/store.jpg"
+
 
 export default function HeroStore() {
   const discountedProduct = products.filter((p) => p.discount > 0)

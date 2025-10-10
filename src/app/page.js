@@ -1,18 +1,9 @@
-import Deals from "@/component/deals";
-import Footer from "@/component/Footer";
-import HeroStore from "@/component/hero";
-import NavBar from "@/component/navbar";
-import TrendingProducts from "@/component/trendingProduct";
-import Image from "next/image";
+import HomeComponent from "@/component/Home/home";
 
 export default function Home() {
   return (
     <div>
-      <NavBar />
-      <HeroStore />
-      <TrendingProducts />
-      <Deals />
-      <Footer />
+      <HomeComponent />
     </div>
   );
 }

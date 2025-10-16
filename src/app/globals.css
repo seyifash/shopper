@@ -185,14 +185,14 @@ input{
 #navbar li span {
     font-size: 12px;
 }
-#navbar li a {
+/*#navbar li a {
     text-decoration: none;
     font-size: 12px;
     font-weight: 400;
     color: #1a1a1a;
     transition: 0.3s ease;
     letter-spacing: 1;
-}
+}*/
 
 #hero {
     position: relative;
@@ -923,7 +923,7 @@ ul {
     }
 
     #header .all-head .name-des a span {
-    font-size: 1.8rem;
+    font-size: 2rem;
     }
 
     #header .all-head .name-des .sm-des {

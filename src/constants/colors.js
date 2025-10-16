@@ -12,4 +12,6 @@ export const Colors = {
   iconColor: "#686477",     // Default icons
   iconColorFocused: "#201e2b", // Active/focused icons
   uiBackground: "#d6d5e1",  // Cards, panels, UI elements
-};
+  hslColor:"hsl(0, 0%, 95%)",
+  navBarText: "#1a1a1a",
+}

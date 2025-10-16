@@ -88,7 +88,7 @@ export default function NavBar() {
               </div>
             )}
             </li>
-          <li className="relative">
+          <li className="relative country-text">
             <i 
               className='bx bx-search cursor-pointer'
               onClick={() => setShowSearch((prev) => !prev)}

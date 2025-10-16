@@ -13,17 +13,177 @@
     src: url("../assets/Romana.ttf");
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
 .pd{
     padding: 10px 20px;
 }
-
+.pdList{
+    padding: 0.7rem 1rem;
+}
+.pInput{
+    padding: 0 0.2rem;
+}
 .useQuesha{
     font-family: myFont;
 }
+
+
+/*#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}*/
+
 #navbar li {
     list-style: none;
-    padding: 0px 20px;
+    padding: 0 1.2rem;
     position: relative;
 }
 
+#navbar li .dropdown li a{
+    font-size: 0.7rem;
+}
+
+#navbar li .dropdown li{
+    padding: 0.5rem 0.5rem;
+}
+
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+#navbar li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    border-radius: 50%;
+    font-size: 10px;
+    top: -11px;
+    right: 10px;
+}
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+.categories {
+    /*position: fixed;
+    top: 50px;*/
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background: white;
+}
+.categories .categories-name, .categories .categories-name1 {
+    margin-right: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.categories .categories-name1 {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding:6px 5px 6px 5px;
+}
+.categories .active {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding:6px 5px 6px 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.categories .categories-name:hover {
+    background-color: #e0dfe8;
+    color: black;
+    padding:6px 7px 6px 7px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+
+.cat-name {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 30px;
+    background: white;
+}
+.cat-name .goods-category {
+    padding-left: 10px;
+    font-family: myFont2;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 750px){
+
+    .pd {
+    padding: 0.rem 1rem;
+    }
+    .the-headers{
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+    }
+
+    #navbar li {
+    padding: 0 0.8rem;
+    font-size: 0.9rem;
+
+    }
+
+    #navbar li:nth-child(3){
+        padding-right: 0rem;
+    }
+
+#navbar li span {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    top: -9px;
+    right: -9px;
+}
+
+    .Business-name .head-cont{
+        font-size: 2rem;
+    }
+    .Business-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shipping-sales .head-cont{
+        font-size: 0.7rem
+    }
+
+    .categories .categories-name, .categories .categories-name1 {
+    margin-right: 10px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+    }
+    .categories .active {
+        padding: 4px 5px 4px 5px;
+        }
+}

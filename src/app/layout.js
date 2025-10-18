@@ -1,7 +1,7 @@
 
 import ReactQueryProvider from "@/providers/reactQueryprovider";
 import "./globals.css";
-
+import ErrorBoundary from "@/component/common/ErrorBoundary";
 
 export default function RootLayout({ children }) {
   return (
@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
       </head>
       <body
       >
-         <ReactQueryProvider >{children}</ReactQueryProvider>
+         <ErrorBoundary>
+          <ReactQueryProvider >{children}</ReactQueryProvider>
+         </ErrorBoundary>
       </body>
     </html>
   );

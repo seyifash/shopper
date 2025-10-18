@@ -13,6 +13,13 @@
     src: url("../assets/Romana.ttf");
 }
 
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: white;
+    overflow-x: hidden;
+}
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -26,8 +33,15 @@
 .pInput{
     padding: 0 0.2rem;
 }
+.mb{
+   margin-bottom: 0.6rem; 
+}
 .useQuesha{
     font-family: myFont;
+}
+
+.useRomana{
+    font-family: myFont2;
 }
 
 
@@ -122,17 +136,48 @@ ul li:hover ul.dropdown {
 
 
 .cat-name {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: flex-end;
     margin-top: 30px;
-    background: white;
 }
 .cat-name .goods-category {
     padding-left: 10px;
-    font-family: myFont2;
-    font-size: 30px;
+}
+
+
+.pro{
+    padding: 10px 12px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(15, 15, 15, 0.02);
+    margin : 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+#product1{
+    overflow-x: hidden; 
+}
+
+.des {
+    padding: 10px 0;
+}
+
+.des h5 {
+    padding-top: 7px;
+    font-weight: 300;
+}
+.pro .des h4 {
+    padding-top: 7px;
+}
+.pro .cart{
+    padding: 5px 7px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.pro .cart:hover {
+    transform: scale(1.10);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 750px){
@@ -186,4 +231,8 @@ ul li:hover ul.dropdown {
     .categories .active {
         padding: 4px 5px 4px 5px;
         }
+
+        .pro {
+        margin: 15px 0;
+    }
 }

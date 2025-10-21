@@ -31,7 +31,7 @@ class ErrorBoundary extends React.Component {
             Something went wrong 😢
           </h2>
           <p className="text-gray-600 mb-4">
-            {error?.message || "An unexpected error occurred."}
+             An unexpected error occurred. Please try again.
           </p>
           <button
             onClick={this.handleRetry}

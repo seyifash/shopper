@@ -3,26 +3,12 @@
 import Image from "next/image";
 import useCurrencyStore from "@/store/countryCurrency";
 import Link from "next/link";
-import Skeleton from "../common/Skeleton";
 
-export default function Card({ product, isLoading = false }) {
+
+export default function Card({ product}) {
   const currency = useCurrencyStore((state) => state.currency);
 
-  if (isLoading || !product) {
-    // Show skeleton placeholders while loading
-    return (
-      <div className="pro w-[23%] min-w-[250px] border border-[#f1f0f0] rounded-md p-2">
-        <Skeleton height="250px" rounded="md" className="w-full mb-2" />
-        <div className="space-y-2">
-          <Skeleton width="60%" height="1rem" />
-          <Skeleton width="80%" height="0.9rem" />
-          <Skeleton width="40%" height="1rem" />
-        </div>
-      </div>
-    );
-  }
 
-  // Once product is available
   return (
     <div className="pro w-[40%] min-w-[150px] md:w-[23%] md:min-w-[250px] border border-[#f1f0f0] rounded-md relative p-2">
       <Image

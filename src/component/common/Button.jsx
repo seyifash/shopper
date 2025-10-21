@@ -22,11 +22,11 @@ const Button = ({
     outline: "border border-gray-400 text-gray-700 hover:bg-gray-100",
   };
 
-  const sizes = {
-    sm: "px-3 py-1 text-sm",
-    md: "px-5 py-3 text-base",
-    lg: "px-6 py-3 text-lg",
-  };
+    const sizes = {
+      sm: "btn-sm",
+      md: "btn-md",
+      lg: "btn-lg",
+    };
 
   return (
     <button

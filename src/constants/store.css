@@ -36,6 +36,10 @@ body {
 .mb{
    margin-bottom: 0.6rem; 
 }
+
+.mt{
+    margin-top: 0.6rem
+}
 .useQuesha{
     font-family: myFont;
 }

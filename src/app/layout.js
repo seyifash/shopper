@@ -2,6 +2,7 @@
 import ReactQueryProvider from "@/providers/reactQueryprovider";
 import "./globals.css";
 import ErrorBoundary from "@/component/common/ErrorBoundary";
+import NetworkStatusBanner from "@/component/Layout/NetworkStatus";
 
 export default function RootLayout({ children }) {
   return (
@@ -15,7 +16,10 @@ export default function RootLayout({ children }) {
       <body
       >
          <ErrorBoundary>
-          <ReactQueryProvider >{children}</ReactQueryProvider>
+          <ReactQueryProvider > 
+            {children}
+            <NetworkStatusBanner />
+          </ReactQueryProvider>
          </ErrorBoundary>
       </body>
     </html>

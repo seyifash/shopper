@@ -3,13 +3,13 @@ import axios from "axios";
 
 const BASE_URL = 'https://shopapi.buildeapp.org/api/v1';
 
-const fetchProducts = async () => {
-    const {data} = await axios.get(`${BASE_URL}/products`);
-    return data.products
+const fetchProducts = async (page) => {
+    const {data} = await axios.get(`${BASE_URL}/products?page=${page}`);
+    return data
 }
-export const useProductQuery = () =>  {
+export const useProductQuery = (page) =>  {
     return useQuery({
-        queryKey: ["products"],
-        queryFn: fetchProducts,
+        queryKey: ["products", page],
+        queryFn: () => fetchProducts(page),
     })
 }

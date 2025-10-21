@@ -5,7 +5,8 @@ import '../../constants/store.css'
 import { Colors } from "@/constants/colors"
 import Input from "../common/Input"
 import { useIsMobile } from "@/Utils/useMobile"
-import { useCategoriesQuery } from "@/queries/products/categories"
+import { useCategoriesQuery } from "@/queries/products/categories";
+import Skeleton from "../common/Skeleton"
 
 const categories = [
     "New In",
@@ -31,7 +32,6 @@ export default  function StoreNavbar() {
     const [showInput, setShowInput] = useState(false)
     const totalCart = 6
 
-    console.log(categories)
 
     const isMobile = useIsMobile(600);
     const handleSearch = () => {
@@ -152,25 +152,42 @@ export default  function StoreNavbar() {
                         <i id="bar" className='bx bx-menu'></i>
                     </div>
             </header>
-          <nav className="w-full flex justify-center categories">
-            <div className="w-[70%] overflow-x-auto scrollbar-hide">
-                <div className="flex gap-4 whitespace-nowrap py-3 px-2 justify-start">
-                {categories?.map((category, index) => (
-                    <span
-                    key={index}
-                    onClick={() => setActive(category)}
-                    className={`categories-name cursor-pointer px-3 py-4 text-sm font-medium flex-shrink-0 transition-all duration-300 rounded-full text-center
-                        ${active === category 
-                        ? "bg-black text-white shadow-md active"
-                        : ""
-                        }`}
-                    >
-                    {category}
-                    </span>
-                ))}
+            <nav className="w-full flex justify-center categories">
+                <div className="w-[70%] overflow-x-auto scrollbar-hide">
+                    <div className="flex gap-4 whitespace-nowrap py-3 px-2 justify-start">
+
+                    {isLoading || isError ? (
+                        // Skeleton placeholders (you can use your Skeleton component here)
+                        Array.from({ length: 10 }).map((_, i) => (
+                            
+                             <Skeleton
+                            key={i}
+                            width="90px"
+                            height="35px"
+                            rounded="full"
+                            className="flex-shrink-0"
+                            />
+                        ))
+                    ) : (
+                        categories?.map((category, index) => (
+                        <span
+                            key={index}
+                            onClick={() => setActive(category)}
+                            className={`categories-name cursor-pointer px-3 py-4 text-sm font-medium flex-shrink-0 transition-all duration-300 rounded-full text-center
+                            ${
+                                active === category
+                                ? "bg-black text-white shadow-md active"
+                                : ""
+                            }`}
+                        >
+                            {category}
+                        </span>
+                        ))
+                    )}
+                    
+                    </div>
                 </div>
-            </div>
-            </nav>
+                </nav>
 
 
         </section>

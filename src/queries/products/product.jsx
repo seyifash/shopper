@@ -13,3 +13,14 @@ export const useProductQuery = (page) =>  {
         queryFn: () => fetchProducts(page),
     })
 }
+
+const fetchSingleProducts = async (id) => {
+    const {data} = await axios.get(`${BASE_URL}/product/${id}`);
+    return data
+}
+export const useSingleProductQuery = (id) =>  {
+    return useQuery({
+        queryKey: ["product", id],
+        queryFn: () => fetchSingleProducts(id),
+    })
+}

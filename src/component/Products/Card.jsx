@@ -30,7 +30,7 @@ export default function Card({ product}) {
             {product.price}
           </h3>
           <Link
-            href={`/store/${product.id}`}
+            href={`/store/${product._id}`}
             className="cart max-w-[90px] md:absolute bottom-[14px] right-[14px] text-[0.7rem] md:text-[12px] rounded-md bg-black text-[#f1f1fa] border border-[#e1e1f8]"
           >
             View Item
